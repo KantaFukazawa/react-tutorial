@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var path    = require('path');
 
 module.exports = {
+  mode: 'production',
   context: path.join(__dirname, "src"),
   entry: "./js/client.js",
   module: {
@@ -19,6 +20,7 @@ module.exports = {
     },
     output: {
       path: __dirname + "/src/",
+      publicPath: '/',
       filename: "client.min.js"
     },
     plugins: debug ? [] : [
